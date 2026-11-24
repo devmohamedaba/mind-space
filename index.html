@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مساحة نفسية | استشارات نفسية ومقالات موثوقة بالعربية</title>
+    <meta
+      name="description"
+      content="مساحة نفسية: منصة عربية للصحة النفسية. تعرّف على أخصائيين مرخّصين، واقرأ مقالات موثوقة، وابدأ رحلتك نحو توازن نفسي أفضل بخصوصية وهدوء."
+    />
+    <meta name="theme-color" content="#2F5044" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/logo/logo.svg" />
+    <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:site_name" content="مساحة نفسية" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- يضبط الوضع الداكن قبل أول رسم لتفادي الوميض -->
+    <script>
+      try {
+        var t = localStorage.getItem('ms-theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

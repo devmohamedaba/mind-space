@@ -1,0 +1,24 @@
+/* مظهر محتوى المقالات (صفحة القارئ + معاينة المحرر). مصمم للقراءة الطويلة: تباين عالٍ، سطر مريح. */
+.article-content { color: rgb(var(--text-primary)); line-height: 2.1; font-size: 1.125rem; overflow-wrap: anywhere; }
+.article-content > * + * { margin-top: 1.4rem; }
+.article-content h2 { margin-top: 3rem; font-size: 1.65rem; font-weight: 600; line-height: 1.6; color: rgb(var(--text-primary)); }
+.article-content h3 { margin-top: 2.2rem; font-size: 1.3rem; font-weight: 600; line-height: 1.6; color: rgb(var(--text-primary)); }
+.article-content h4 { font-size: 1.1rem; font-weight: 600; color: rgb(var(--text-primary)); }
+.article-content strong { font-weight: 600; }
+.article-content a { color: rgb(var(--primary)); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+.article-content a:hover { color: rgb(var(--accent-text)); }
+.article-content ul { list-style: disc; padding-inline-start: 1.6rem; }
+.article-content ol { list-style: decimal; padding-inline-start: 1.6rem; }
+.article-content li::marker { color: rgb(var(--accent)); }
+.article-content li + li { margin-top: 0.6rem; }
+.article-content li > p { margin: 0; }
+.article-content blockquote { border-inline-start: 4px solid rgb(var(--accent)); background: rgb(var(--surface-alt)); padding: 1rem 1.4rem; border-radius: 1rem; }
+.article-content blockquote p { margin: 0; }
+.article-content img { max-width: 100%; height: auto; border-radius: 1.25rem; }
+.article-content hr { border: 0; border-top: 1px solid rgb(var(--border)); margin-block: 2.5rem; }
+.article-content code { background: rgb(var(--surface-alt)); padding: 0.1rem 0.4rem; border-radius: 0.4rem; font-size: 0.95em; }
+.article-content table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; }
+.article-content th, .article-content td { border: 1px solid rgb(var(--border)); padding: 0.7rem 0.9rem; text-align: start; vertical-align: top; }
+.article-content th { background: rgb(var(--surface-alt)); font-weight: 600; }
+.article-content td > p, .article-content th > p { margin: 0; }
+@media (max-width: 640px) { .article-content { font-size: 1.06rem; line-height: 2; } }

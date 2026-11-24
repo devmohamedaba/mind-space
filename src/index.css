@@ -1,0 +1,114 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+
+    /* الأخضر الغابي الداكن */
+    --primary: 47 80 68; /* #2F5044 — تباين مع الأبيض 9.4:1 */
+    --primary-dark: 36 63 53;
+    --primary-soft: 225 234 228;
+    --on-primary: 255 255 255;
+
+    /* المريمي والضباب */
+    --sage: 163 184 153;
+    --sage-soft: 230 237 226;
+    --mist: 221 231 225;
+
+    /* الخوخي الترابي (لمسات فقط) */
+    --accent: 201 138 106;
+    --accent-soft: 247 232 221;
+    --accent-text: 143 79 50; /* للنص على العاجي: 5.9:1 */
+
+    /* الأسطح: عاجي دافئ وأبيض */
+    --surface: 251 247 238;
+    --surface-alt: 244 239 227;
+    --surface-card: 255 255 255;
+
+    /* النصوص: تباين عالٍ للقراءة الطويلة */
+    --text-primary: 31 42 37; /* #1F2A25 على العاجي 14:1 */
+    --text-secondary: 85 91 78; /* رمادي زيتي 6.4:1 */
+    --border: 226 221 205;
+
+    --success: 47 110 75;
+    --warning: 154 106 20;
+    --error: 176 48 48;
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --primary: 159 195 174; /* مريمي فاتح للأزرار */
+    --primary-dark: 188 217 201;
+    --primary-soft: 36 52 45;
+    --on-primary: 16 32 26;
+
+    --sage: 120 148 128;
+    --sage-soft: 30 42 36;
+    --mist: 34 47 40;
+
+    --accent: 218 160 130;
+    --accent-soft: 52 40 33;
+    --accent-text: 232 185 157;
+
+    --surface: 18 25 22;
+    --surface-alt: 24 33 29;
+    --surface-card: 30 40 35;
+
+    --text-primary: 237 241 234;
+    --text-secondary: 183 192 178;
+    --border: 46 60 52;
+
+    --success: 130 200 160;
+    --warning: 226 183 100;
+    --error: 235 140 140;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface font-sans text-base leading-8 text-content antialiased;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold leading-snug tracking-normal;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: rgb(var(--sage) / 0.35);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply absolute start-4 top-4 z-[100] -translate-y-24 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-on shadow-lift focus:translate-y-0;
+  }
+}
